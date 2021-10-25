@@ -4,8 +4,9 @@ using UnityEngine;
 
 public class GameManager : MonoSingleton<GameManager>
 {
+    public UiManager uiManager {get;private set;}
     [SerializeField]
-   private GameObject[] roomPanel = null;
+    private GameObject[] roomPanel = null;
     private void Awake()
     {
         
