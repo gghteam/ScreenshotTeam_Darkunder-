@@ -4,11 +4,10 @@ using UnityEngine;
 
 public class GameManager : MonoSingleton<GameManager>
 {
+    
     public UiManager uiManager {get;private set;}
     [SerializeField]
-    private GameObject[] roomPanel = null;
-    private void Awake()
-    {
-        
-    }
+    private User user;
+    public User currentUser {get{return user;}}
+
 }
