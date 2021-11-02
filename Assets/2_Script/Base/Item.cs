@@ -1,21 +1,33 @@
-[System.Serializable]
+using System;
+
+[Serializable]
 public class Item 
 {
     public int itemID;
-    public string itemName;
-    public int imageNumber;
-    public ItemType itemType;
+    private string itemName;
+    private int imageNumber;
+    private ItemType itemType;
     public enum ItemType
     {
-        Use,
-        Equip,
-        ETC
+        None = 0,
+        Use = 1,
+        Equip = 2,
+        ETC = 3
     }
-    public Item(int _itemID,string _itemName,int _imageNumber,ItemType _itemType)
-    {
-        itemID = _itemID;
-        itemName = _itemName;
-        imageNumber = _imageNumber;
-        itemType = _itemType;
+    // public int ID{
+    //     set{itemID = value;}
+    //     get{return itemID;}
+    // }
+    public string NAME{
+        set{itemName = value;}
+        get{return itemName;}
+    }
+    public int ICON{
+        set{imageNumber = value;}
+        get{return imageNumber;}
+    }
+    public ItemType TYPE{
+        set{itemType = value;}
+        get{return itemType;}
     }
 }
