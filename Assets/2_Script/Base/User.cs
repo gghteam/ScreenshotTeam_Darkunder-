@@ -4,5 +4,5 @@ public class User
 {
     public List<Item> itemList = new List<Item>();
     public List<Item> inventoryList = new List<Item>();
-    public List<Door> doorList = new List<Door>();
+    public DoorData doorListData;
 }

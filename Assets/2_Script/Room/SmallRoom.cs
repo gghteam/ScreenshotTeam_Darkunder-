@@ -47,12 +47,24 @@ public class SmallRoom : MonoBehaviour
     }
     public void OpenDoor(int id)
     {
-        
-        foreach (Door door in GameManager.Instance.CurrentUser.doorList)
+        Debug.Log(id);
+        Door door = null;
+        door =  GameManager.Instance.CurrentUser.doorListData.DoorList[id];
+        if(door.doorOpen)
         {
-            
+            ChangeRoom();
+            return;
         }
-        FindObjectOfType<DialogueData>().StartDialogue(0);
+        foreach (Item inventory in GameManager.Instance.CurrentUser.inventoryList)
+        {
+            if(inventory.itemID == door.doorKeyID)
+            {
+                GameManager.Instance.CurrentUser.doorListData.DoorList[id].doorOpen = true;
+                ChangeRoom();
+                return;
+            }
+        }
+        FindObjectOfType<DialogueData>().StartDialogue(id);
     }
     private void ChangeRoom()
     {

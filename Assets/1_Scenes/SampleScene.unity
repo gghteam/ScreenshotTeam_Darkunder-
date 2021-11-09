@@ -1467,12 +1467,14 @@ MonoBehaviour:
       imageNumber: 0
       itemType: 1
     inventoryList: []
-    doorList:
-    - doorID: 0
-      doorKeyID: 0
-      doorName: "\uC791\uC740\uBC29 \uBB38"
-      SentenceID: 0
-      doorOpen: 0
+    doorListData:
+      id: 0
+      DoorList:
+      - doorName: "\uC791\uC740\uBC29 "
+        doorID: 0
+        doorKeyID: 0
+        SentenceID: 0
+        doorOpen: 0
 --- !u!4 &980378276
 Transform:
   m_ObjectHideFlags: 0
