@@ -27,31 +27,36 @@ public class SmallRoom : MonoBehaviour
     }
     public void AcquisitionItem(int itmeId)
     {
-        switch(itmeId)
+        foreach (Item item in GameManager.Instance.CurrentUser.itemList)
         {
-            case 1:
-            if(iskey)return;
-            iskey = true;
-            GameManager.Instance.currentUser.AddList(1,"열쇠",1,1);
-            break;
+            if(itmeId==item.itemID)
+            {
+                foreach (Item inventory in GameManager.Instance.CurrentUser.inventoryList)
+                {
+                    if(itmeId==inventory.itemID)
+                    {
+                        return;
+                    }
+                }
+                GameManager.Instance.CurrentUser.inventoryList.Add(item);
+                GameManager.Instance.uiManager.AddPanel(item);
+                Debug.Log("item Acquisition");
+                return;
+            }
         }
     }
     public void OpenDoor(int id)
     {
-        if(isopenDoor)
+        
+        foreach (Door door in GameManager.Instance.CurrentUser.doorList)
         {
-            OnClickNextRoom();
-            return;
-        }
-        foreach (Item item in GameManager.Instance.currentUser.itemList)
-        {
-            if(item.itemID == id)
-            {
-                isopenDoor = true;
-                OnClickNextRoom();
-                return;
-            }
+            
         }
         FindObjectOfType<DialogueData>().StartDialogue(0);
+    }
+    private void ChangeRoom()
+    {
+        gameObject.SetActive(false);
+        nextRoom.SetActive(true);
     }
 }
