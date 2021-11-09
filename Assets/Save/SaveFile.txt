@@ -1,0 +1,23 @@
+﻿{
+    "itemList": [
+        {
+            "itemID": 0,
+            "itemName": "작은방 열쇠",
+            "imageNumber": 0,
+            "itemType": 1
+        }
+    ],
+    "inventoryList": [],
+    "doorListData": {
+        "id": 0,
+        "DoorList": [
+            {
+                "doorName": "작은방 ",
+                "doorID": 0,
+                "doorKeyID": 0,
+                "SentenceID": 0,
+                "doorOpen": false
+            }
+        ]
+    }
+}
