@@ -19,11 +19,11 @@ public class LivingRoom : MonoBehaviour
     private Button drawerExitButton2;
     [SerializeField]
     private Sprite[] carfetSprites;
-    private SpriteRenderer carfetSpriteRenderer;
+    private Image carfetImage;
     public bool onoff = false;
     private void Start()
     {
-        carfetSpriteRenderer = carfet.GetComponent<SpriteRenderer>();
+        carfetImage = carfet.GetComponent<Image>();
         drawerExitButton1.gameObject.SetActive(false);
         drawer.SetActive(false);
     }
@@ -53,12 +53,12 @@ public class LivingRoom : MonoBehaviour
         if (carfetNum == 0)
         {
             ++carfetNum;
-            carfetSpriteRenderer.sprite = carfetSprites[carfetNum];
+            carfetImage.sprite = carfetSprites[carfetNum];
         }
         else if (carfetNum == 1)
         {
             --carfetNum;
-            carfetSpriteRenderer.sprite = carfetSprites[carfetNum];
+            carfetImage.sprite = carfetSprites[carfetNum];
         }
     }
 }
