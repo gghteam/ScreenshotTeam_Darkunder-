@@ -33,38 +33,6 @@
                 "SentenceID": 0,
                 "nextRoomID": 0,
                 "doorOpen": true
-            },
-            {
-                "doorName": "거실_뒷거실",
-                "doorID": 2,
-                "doorKeyID": 0,
-                "SentenceID": 0,
-                "nextRoomID": 2,
-                "doorOpen": true
-            },
-            {
-                "doorName": "뒷거실_거실",
-                "doorID": 3,
-                "doorKeyID": 0,
-                "SentenceID": 0,
-                "nextRoomID": 1,
-                "doorOpen": true
-            },
-            {
-                "doorName": "거실_부엌",
-                "doorID": 4,
-                "doorKeyID": 0,
-                "SentenceID": 0,
-                "nextRoomID": 3,
-                "doorOpen": true
-            },
-            {
-                "doorName": "부엌_거실",
-                "doorID": 5,
-                "doorKeyID": 0,
-                "SentenceID": 0,
-                "nextRoomID": 1,
-                "doorOpen": true
             }
         ]
     }
