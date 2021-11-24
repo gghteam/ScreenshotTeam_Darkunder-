@@ -14,6 +14,15 @@ public class LivingRoom : MonoBehaviour
     private GameObject carfet; //카펫 오브젝트 
 
     [SerializeField]
+    private GameObject mirror;
+
+    [SerializeField]
+    private Button mirrorButton;
+
+    [SerializeField]
+    private Button mirrorExitButton;
+
+    [SerializeField]
     private GameObject drawer1; //첫번째 서랍
 
     [SerializeField]
@@ -43,42 +52,115 @@ public class LivingRoom : MonoBehaviour
     [SerializeField]
     private Sprite[] drawersSprites;//서랍 스프라이트들
 
+    [SerializeField]
+    private Button frameButton;
+
+    [SerializeField]
+    private Button frameExitButton;
+
+    [SerializeField]
+    private GameObject frame;
+
     private Image carfetImage;
 
     private Image drawer1Image;
 
-    public bool onOff = false;
     public bool objectOnOff = false;
 
+    private bool frameOnOff = false;
+
+    private bool drawerOnOff = false;
+
+    private bool mirrorOnOff = false;
     private void Start()
     {
         drawer1Image = drawer1.GetComponent<Image>();
         carfetImage = carfet.GetComponent<Image>();
         drawersExitButton1.gameObject.SetActive(false);
         drawersExitButton2.gameObject.SetActive(false);
+        frameExitButton.gameObject.SetActive(false);
+        mirrorExitButton.gameObject.SetActive(false);
         drawerButton1Image2.gameObject.SetActive(false);
         drawers.SetActive(false);
     }
     public void DrawersClick()
     {
-        if (onOff == false)
+        if (drawerOnOff == false)
         {
             drawers.SetActive(true);
-            onOff = true;
+            drawerOnOff = true;
             kitchenButton.gameObject.SetActive(false);
             carfetButton.gameObject.SetActive(false);
+            mirrorButton.gameObject.SetActive(false);
+            mirrorExitButton.gameObject.SetActive(false);
             drawersExitButton1.gameObject.SetActive(true);
             drawersExitButton2.gameObject.SetActive(true);
             drawersButton1.gameObject.SetActive(false);
         }
-        else if (onOff == true)
+        else if (drawerOnOff == true)
         {
             kitchenButton.gameObject.SetActive(true);
             drawers.SetActive(false);
-            onOff = false;
+            drawerOnOff = false;
+            mirrorButton.gameObject.SetActive(true);
+            mirrorExitButton.gameObject.SetActive(false);
             carfetButton.gameObject.SetActive(true);
             drawersExitButton1.gameObject.SetActive(false);
             drawersExitButton2.gameObject.SetActive(false);
+            drawersButton1.gameObject.SetActive(true);
+        }
+    }
+    public void FrameClick()
+    {
+        if (frameOnOff == false)
+        {
+            frameOnOff = true;
+            frame.SetActive(true);
+            frameExitButton.gameObject.SetActive(true);
+            mirrorButton.gameObject.SetActive(false);
+            mirrorExitButton.gameObject.SetActive(false);
+            frameButton.gameObject.SetActive(false);
+            kitchenButton.gameObject.SetActive(false);
+            carfetButton.gameObject.SetActive(false);
+            drawersButton1.gameObject.SetActive(false);
+        }
+        else if (frameOnOff == true)
+        {
+            frameOnOff = false;
+            frame.SetActive(false);
+            frameExitButton.gameObject.SetActive(false);
+            mirrorButton.gameObject.SetActive(true);
+            mirrorExitButton.gameObject.SetActive(false);
+            frameButton.gameObject.SetActive(true);
+            kitchenButton.gameObject.SetActive(true);
+            carfetButton.gameObject.SetActive(true);
+            drawersButton1.gameObject.SetActive(true);
+        }
+    }
+    public void MirrorClick()
+    {
+        if (mirrorOnOff == false)
+        {
+            mirrorOnOff = true;
+            mirror.SetActive(true);
+            frameExitButton.gameObject.SetActive(true);
+            mirrorButton.gameObject.SetActive(false);
+            mirrorExitButton.gameObject.SetActive(true);
+            frameButton.gameObject.SetActive(false);
+            kitchenButton.gameObject.SetActive(false);
+            carfetButton.gameObject.SetActive(false);
+            drawersButton1.gameObject.SetActive(false);
+        }
+        else if (mirrorOnOff == true)
+        {
+            mirrorOnOff = false;
+            mirror.SetActive(false);
+            frameExitButton.gameObject.SetActive(false);
+            mirrorButton.gameObject.SetActive(true);
+            mirrorExitButton.gameObject.SetActive(false);
+            frameButton.gameObject.SetActive(true);
+            kitchenButton.gameObject.SetActive(true);
+            carfetButton.gameObject.SetActive(true);
             drawersButton1.gameObject.SetActive(true);
         }
     }
