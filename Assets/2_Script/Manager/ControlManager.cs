@@ -32,7 +32,7 @@ public class ControlManager : MonoBehaviour
     }
     public void OpenDoor(int id)
     {
-        Debug.Log(id);
+        Debug.Log("openDoorList "+id);
         Door door = null;
         door =  GameManager.Instance.CurrentUser.doorListData.DoorList[id];
         if(door.doorOpen)

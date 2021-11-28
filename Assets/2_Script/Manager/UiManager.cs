@@ -8,6 +8,12 @@ using System;
 public class UiManager : MonoBehaviour
 {
     [SerializeField]
+    private GameObject startGamePanel;
+    [SerializeField]
+    private GameObject inGmaePanel;
+    [SerializeField]
+    private GameObject settingPanel;
+    [SerializeField]
     private RectTransform itemPanel;
     [SerializeField]
     private float upDownY = 0.5f;
@@ -18,6 +24,25 @@ public class UiManager : MonoBehaviour
     private bool isUptime = false;
     private void Start() {
         CreateInventoryPanel();
+    }
+    public void StartGameBtn()
+    {
+        Debug.Log("Start Game");
+        inGmaePanel.SetActive(true);
+        startGamePanel.SetActive(false);
+    }
+    public void SettingPanelBtn()
+    {
+        settingPanel.SetActive(true);
+    }
+    public void OffSettingPanelBtn()
+    {
+        settingPanel.SetActive(false);
+    }
+    public void QuitGame()
+    {
+        Debug.Log("Quit Game");
+        Application.Quit();
     }
     private void CreateInventoryPanel()
     {
@@ -32,6 +57,7 @@ public class UiManager : MonoBehaviour
             InventoryPanelList.Add(panelComponent);
         }
     }
+
     public void AddPanel(Item addItem)
     {
         Debug.Log("Null?");
