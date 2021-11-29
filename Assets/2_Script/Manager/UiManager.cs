@@ -14,6 +14,8 @@ public class UiManager : MonoBehaviour
     [SerializeField]
     private GameObject settingPanel;
     [SerializeField]
+    private GameObject menuPanel;
+    [SerializeField]
     private RectTransform itemPanel;
     [SerializeField]
     private float upDownY = 0.5f;
@@ -24,6 +26,13 @@ public class UiManager : MonoBehaviour
     private bool isUptime = false;
     private void Start() {
         CreateInventoryPanel();
+    }
+    private void Update() {
+        if(Input.GetKey(KeyCode.Escape))
+        {
+            Debug.Log("Click ESC On");
+            OnMenuPanelBtn();
+        }
     }
     public void StartGameBtn()
     {
@@ -38,6 +47,14 @@ public class UiManager : MonoBehaviour
     public void OffSettingPanelBtn()
     {
         settingPanel.SetActive(false);
+    }
+    public void OnMenuPanelBtn()
+    {
+        menuPanel.SetActive(true);
+    }
+    public void OffMenuPanelBtn()
+    {
+        menuPanel.SetActive(false);
     }
     public void QuitGame()
     {
