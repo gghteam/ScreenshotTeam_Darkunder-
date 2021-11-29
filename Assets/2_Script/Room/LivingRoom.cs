@@ -17,6 +17,9 @@ public class LivingRoom : MonoBehaviour
     private GameObject mirror;
 
     [SerializeField]
+    private GameObject drawerKey;
+
+    [SerializeField]
     private Button mirrorButton;
 
     [SerializeField]
@@ -26,10 +29,16 @@ public class LivingRoom : MonoBehaviour
     private GameObject drawer1; //ù��° ����
 
     [SerializeField]
+    private GameObject drawer2;
+
+    [SerializeField]
     private Button carfetButton;//ī�� ��ư
 
     [SerializeField]
     private Button drawersButton1;//ù��° ���� ��ư
+
+    [SerializeField]
+    private Button drawersButton2;
 
     [SerializeField]
     private Button drawerButton1Image2;//Ȯ�� �Ǿ����� ù��° ���� ������ �� ��ư
@@ -49,7 +58,11 @@ public class LivingRoom : MonoBehaviour
     private Sprite[] carfetSprites;//ī�� ��������Ʈ��
 
     [SerializeField]
-    private Sprite[] drawersSprites;//���� ��������Ʈ��
+    private Sprite[] drawersSprites;//���� ��������Ʈ��'
+
+    [SerializeField]
+    private Sprite[] drawers2Sprite;
+
     [SerializeField]
     private Button moveToBackLivingroom;
     [SerializeField]
@@ -64,6 +77,8 @@ public class LivingRoom : MonoBehaviour
     private Image carfetImage;
 
     private Image drawer1Image;
+
+    public Image drawer2Image;
 
     public bool objectOnOff = false;
 
@@ -82,6 +97,8 @@ public class LivingRoom : MonoBehaviour
         frameExitButton.gameObject.SetActive(false);
         mirrorExitButton.gameObject.SetActive(false);
         drawerButton1Image2.gameObject.SetActive(false);
+        drawerButton1Image2.gameObject.SetActive(false);
+        drawerKey.gameObject.SetActive(false);
         drawers.SetActive(false);
     }
     public void DrawersClick()
@@ -167,9 +184,16 @@ public class LivingRoom : MonoBehaviour
         {
             ++carfetNum;
             carfetImage.sprite = carfetSprites[carfetNum];
+            drawerKey.gameObject.SetActive(true);
+            carfetButton.gameObject.SetActive(false);
         }
-        carfetButton.gameObject.SetActive(false);
     }
+
+    public void DrawerKey()
+    {
+        drawerKey.gameObject.SetActive(false);
+    }    
+
     public void Drawer1Click()
     {
         if (drawers1Num == 0)
@@ -209,6 +233,9 @@ public class LivingRoom : MonoBehaviour
             {
                 Debug.Log("Open Chest");
                 OpenChest();
+                drawersButton2.gameObject.SetActive(false);
+                ++drawers2Num;
+                drawer2Image.sprite = drawers2Sprite[drawers2Num];
                 return;
             }
         }

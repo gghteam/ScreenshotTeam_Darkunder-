@@ -27,12 +27,6 @@
     ],
     "inventoryList": [
         {
-            "itemID": 0,
-            "itemName": "작은방 열쇠",
-            "imageNumber": 0,
-            "itemType": 1
-        },
-        {
             "itemID": 1,
             "itemName": "서랍장 열쇠",
             "imageNumber": 1,
@@ -48,7 +42,7 @@
                 "doorKeyID": 0,
                 "SentenceID": 0,
                 "nextRoomID": 1,
-                "doorOpen": true
+                "doorOpen": false
             },
             {
                 "doorName": "거실_작은방문",
