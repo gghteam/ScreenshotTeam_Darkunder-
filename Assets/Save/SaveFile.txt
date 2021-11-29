@@ -5,12 +5,24 @@
             "itemName": "작은방 열쇠",
             "imageNumber": 0,
             "itemType": 1
+        },
+        {
+            "itemID": 1,
+            "itemName": "서랍장 열쇠",
+            "imageNumber": 0,
+            "itemType": 1
         }
     ],
     "inventoryList": [
         {
             "itemID": 0,
             "itemName": "작은방 열쇠",
+            "imageNumber": 0,
+            "itemType": 1
+        },
+        {
+            "itemID": 1,
+            "itemName": "서랍장 열쇠",
             "imageNumber": 0,
             "itemType": 1
         }

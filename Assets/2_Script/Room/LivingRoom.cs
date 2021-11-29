@@ -8,10 +8,10 @@ public class LivingRoom : MonoBehaviour
     private int drawers1Num = 0;
     private int drawers2Num = 0;
     [SerializeField]
-    GameObject drawers; //¼­¶øÀå ÀüÃ¼
+    GameObject drawers; //ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Ã¼
 
     [SerializeField]
-    private GameObject carfet; //Ä«Æê ¿ÀºêÁ§Æ® 
+    private GameObject carfet; //Ä«ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æ® 
 
     [SerializeField]
     private GameObject mirror;
@@ -23,41 +23,35 @@ public class LivingRoom : MonoBehaviour
     private Button mirrorExitButton;
 
     [SerializeField]
-    private GameObject drawer1; //Ã¹¹øÂ° ¼­¶ø
+    private GameObject drawer1; //Ã¹ï¿½ï¿½Â° ï¿½ï¿½ï¿½ï¿½
 
     [SerializeField]
-    private Button carfetButton;//Ä«Æê ¹öÆ°
+    private Button carfetButton;//Ä«ï¿½ï¿½ ï¿½ï¿½Æ°
 
     [SerializeField]
-    private Button drawersButton1;//Ã¹¹øÂ° ¼­¶ø ¹öÆ°
+    private Button drawersButton1;//Ã¹ï¿½ï¿½Â° ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Æ°
 
     [SerializeField]
-    private Button drawerButton1Image2;//È®´ë µÇ¾úÀ»¶§ Ã¹¹øÂ° ¼­¶ø ´­·¶À» ¶§ ¹öÆ°
+    private Button drawerButton1Image2;//È®ï¿½ï¿½ ï¿½Ç¾ï¿½ï¿½ï¿½ï¿½ï¿½ Ã¹ï¿½ï¿½Â° ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½Æ°
 
     [SerializeField]
-    private Button drawersExitButton1;//¼­¶øÀå ³ª°¡±â ¹öÆ°
+    private Button drawersExitButton1;//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Æ°
 
     [SerializeField]
-    private Button drawersExitButton2;//¼­¶øÀå ³ª°¡±â ¹öÆ°2
-
+    private Button drawersExitButton2;//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Æ°2
     [SerializeField]
     private Button drawersExitButton3;
 
     [SerializeField]
-    private Button kitchenButton;//ºÎ¾ý °¡±â ¹öÆ°
+    private Button drawer1button;//È®ï¿½ï¿½ ï¿½Ç¾ï¿½ï¿½ï¿½ï¿½ï¿½Ã¹ï¿½ï¿½Â° ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Æ°
 
     [SerializeField]
-    private Button drawer1button;//È®´ë µÇ¾úÀ»¶§Ã¹¹øÂ° ¼­¶ø ¹öÆ°
+    private Sprite[] carfetSprites;//Ä«ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æ®ï¿½ï¿½
 
     [SerializeField]
-    private Sprite[] carfetSprites;//Ä«Æê ½ºÇÁ¶óÀÌÆ®µé
-
-    [SerializeField]
-    private Sprite[] drawersSprites;//¼­¶ø ½ºÇÁ¶óÀÌÆ®µé
-
+    private Sprite[] drawersSprites;//ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æ®ï¿½ï¿½
     [SerializeField]
     private Button moveToBackLivingroom;
-
     [SerializeField]
     private Button frameButton;
 
@@ -96,9 +90,7 @@ public class LivingRoom : MonoBehaviour
         {
             drawers.SetActive(true);
             drawerOnOff = true;
-            kitchenButton.gameObject.SetActive(false);
             moveToBackLivingroom.gameObject.SetActive(false);
-            carfetButton.gameObject.SetActive(false);
             mirrorButton.gameObject.SetActive(false);
             mirrorExitButton.gameObject.SetActive(false);
             drawersExitButton1.gameObject.SetActive(true);
@@ -108,13 +100,11 @@ public class LivingRoom : MonoBehaviour
         }
         else if (drawerOnOff == true)
         {
-            kitchenButton.gameObject.SetActive(true);
             moveToBackLivingroom.gameObject.SetActive(true);
             drawers.SetActive(false);
             drawerOnOff = false;
             mirrorButton.gameObject.SetActive(true);
             mirrorExitButton.gameObject.SetActive(false);
-            carfetButton.gameObject.SetActive(true);
             drawersExitButton1.gameObject.SetActive(false);
             drawersExitButton2.gameObject.SetActive(false);
             drawersExitButton3.gameObject.SetActive(false);
@@ -132,8 +122,6 @@ public class LivingRoom : MonoBehaviour
             mirrorButton.gameObject.SetActive(false);
             mirrorExitButton.gameObject.SetActive(false);
             frameButton.gameObject.SetActive(false);
-            kitchenButton.gameObject.SetActive(false);
-            carfetButton.gameObject.SetActive(false);
             drawersButton1.gameObject.SetActive(false);
         }
         else if (frameOnOff == true)
@@ -145,8 +133,6 @@ public class LivingRoom : MonoBehaviour
             mirrorButton.gameObject.SetActive(true);
             mirrorExitButton.gameObject.SetActive(false);
             frameButton.gameObject.SetActive(true);
-            kitchenButton.gameObject.SetActive(true);
-            carfetButton.gameObject.SetActive(true);
             drawersButton1.gameObject.SetActive(true);
         }
     }
@@ -161,8 +147,6 @@ public class LivingRoom : MonoBehaviour
             mirrorButton.gameObject.SetActive(false);
             mirrorExitButton.gameObject.SetActive(true);
             frameButton.gameObject.SetActive(false);
-            kitchenButton.gameObject.SetActive(false);
-            carfetButton.gameObject.SetActive(false);
             drawersButton1.gameObject.SetActive(false);
         }
         else if (mirrorOnOff == true)
@@ -174,8 +158,6 @@ public class LivingRoom : MonoBehaviour
             mirrorButton.gameObject.SetActive(true);
             mirrorExitButton.gameObject.SetActive(false);
             frameButton.gameObject.SetActive(true);
-            kitchenButton.gameObject.SetActive(true);
-            carfetButton.gameObject.SetActive(true);
             drawersButton1.gameObject.SetActive(true);
         }
     }
@@ -186,11 +168,7 @@ public class LivingRoom : MonoBehaviour
             ++carfetNum;
             carfetImage.sprite = carfetSprites[carfetNum];
         }
-        else if (carfetNum == 1)
-        {
-            --carfetNum;
-            carfetImage.sprite = carfetSprites[carfetNum];
-        }
+        carfetButton.gameObject.SetActive(false);
     }
     public void Drawer1Click()
     {
@@ -222,4 +200,23 @@ public class LivingRoom : MonoBehaviour
             carfetImage.sprite = carfetSprites[carfetNum];
         }
     }
+    public void OpenChest(int id)
+    {
+        Debug.Log("Chest");
+        foreach (Item item in GameManager.Instance.CurrentUser.inventoryList)
+        {
+            if(item.itemID==id)
+            {
+                Debug.Log("Open Chest");
+                OpenChest();
+                return;
+            }
+        }
+        FindObjectOfType<DialogueData>().StartDialogue(id);
+    }
+    private void OpenChest()
+    {
+
+    }
+    
 }
