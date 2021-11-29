@@ -3623,7 +3623,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: a190c23a90b2e5b44bfab2f1c22893d0, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 901455c426ef2ac47863b67a3e40a4a1, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -4253,8 +4253,16 @@ MonoBehaviour:
       itemType: 1
     - itemID: 1
       itemName: "\uC11C\uB78D\uC7A5 \uC5F4\uC1E0"
-      imageNumber: 0
+      imageNumber: 1
       itemType: 1
+    - itemID: 2
+      itemName: "\uB9DD\uCE58"
+      imageNumber: 2
+      itemType: 2
+    - itemID: 3
+      itemName: "\uC720\uB9AC \uC870\uAC01"
+      imageNumber: 3
+      itemType: 2
     inventoryList: []
     doorListData:
       id: 0
@@ -7894,6 +7902,9 @@ MonoBehaviour:
   itemNameText: {fileID: 986567649}
   itemSprites:
   - {fileID: 3703420855921726256, guid: 2962915df36744947924f2508b070aa6, type: 3}
+  - {fileID: -694199556428668375, guid: 2962915df36744947924f2508b070aa6, type: 3}
+  - {fileID: 6952754937049113265, guid: 2962915df36744947924f2508b070aa6, type: 3}
+  - {fileID: -43767218995248529, guid: 2962915df36744947924f2508b070aa6, type: 3}
 --- !u!1 &2144457518
 GameObject:
   m_ObjectHideFlags: 0

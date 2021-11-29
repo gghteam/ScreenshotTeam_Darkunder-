@@ -8,6 +8,12 @@ TextureImporter:
   - first:
       213: -694199556428668375
     second: DarkUnder_Item_1
+  - first:
+      213: 6952754937049113265
+    second: DarkUnder_Item_2
+  - first:
+      213: -43767218995248529
+    second: DarkUnder_Item_3
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -133,7 +139,7 @@ TextureImporter:
       name: DarkUnder_Item_1
       rect:
         serializedVersion: 2
-        x: 512
+        x: 256
         y: 768
         width: 256
         height: 256
@@ -146,6 +152,48 @@ TextureImporter:
       bones: []
       spriteID: 922e5d37e25bd56f0800000000000000
       internalID: -694199556428668375
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DarkUnder_Item_2
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 768
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1b2e72927c52d7060800000000000000
+      internalID: 6952754937049113265
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DarkUnder_Item_3
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 768
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f624bfa32f1846ff0800000000000000
+      internalID: -43767218995248529
       vertices: []
       indices: 
       edges: []
