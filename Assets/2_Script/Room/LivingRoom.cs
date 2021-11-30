@@ -20,6 +20,9 @@ public class LivingRoom : MonoBehaviour
     private GameObject drawerKey;
 
     [SerializeField]
+    private GameObject hamer;
+
+    [SerializeField]
     private Button mirrorButton;
 
     [SerializeField]
@@ -99,6 +102,7 @@ public class LivingRoom : MonoBehaviour
         drawerButton1Image2.gameObject.SetActive(false);
         drawerButton1Image2.gameObject.SetActive(false);
         drawerKey.gameObject.SetActive(false);
+        hamer.gameObject.SetActive(false);
         drawers.SetActive(false);
     }
     public void DrawersClick()
@@ -192,24 +196,28 @@ public class LivingRoom : MonoBehaviour
     public void DrawerKey()
     {
         drawerKey.gameObject.SetActive(false);
-    }    
-
+    }
+    public void HamerKey()
+    {
+        hamer.gameObject.SetActive(false);
+    }
     public void Drawer1Click()
     {
         if (drawers1Num == 0)
         {
+            hamer.gameObject.SetActive(true);
             ++drawers1Num;
             drawer1Image.sprite = drawersSprites[drawers1Num];
             drawer1button.gameObject.SetActive(false);
             drawerButton1Image2.gameObject.SetActive(true);
         }
-        else if (drawers1Num == 1)
+        /*else if (drawers1Num == 1)
         {
             --drawers1Num;
-            drawer1Image.sprite = drawersSprites[drawers1Num];
+            //drawer1Image.sprite = drawersSprites[drawers1Num];
             drawer1button.gameObject.SetActive(true);
             drawerButton1Image2.gameObject.SetActive(false);
-        }
+        }*/
     }
     public void Drawer2Click()
     {
