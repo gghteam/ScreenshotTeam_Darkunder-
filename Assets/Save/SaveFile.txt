@@ -39,16 +39,16 @@
             "itemType": 2
         },
         {
-            "itemID": 3,
-            "itemName": "유리 조각",
-            "imageNumber": 3,
-            "itemType": 2
-        },
-        {
             "itemID": 1,
             "itemName": "서랍장 열쇠",
             "imageNumber": 1,
             "itemType": 1
+        },
+        {
+            "itemID": 3,
+            "itemName": "유리 조각",
+            "imageNumber": 3,
+            "itemType": 2
         }
     ],
     "doorListData": {
