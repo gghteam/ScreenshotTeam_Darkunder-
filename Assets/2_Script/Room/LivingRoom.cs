@@ -206,6 +206,7 @@ public class LivingRoom : MonoBehaviour
         {
             ++carfetNum;
             carfetImage.sprite = carfetSprites[carfetNum];
+            SfxManager.sfxInstance.Audio.PlayOneShot(SfxManager.sfxInstance.ex_Click_Carfet);
             if(SetHamer(1)==false)
             drawerKey.gameObject.SetActive(true);
             carfetButton.gameObject.SetActive(false);
