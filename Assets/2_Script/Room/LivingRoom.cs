@@ -188,6 +188,7 @@ public class LivingRoom : MonoBehaviour
         {
             ++carfetNum;
             carfetImage.sprite = carfetSprites[carfetNum];
+            if(SetHamer(1)==false)
             drawerKey.gameObject.SetActive(true);
             carfetButton.gameObject.SetActive(false);
         }
@@ -205,7 +206,10 @@ public class LivingRoom : MonoBehaviour
     {
         if (drawers1Num == 0)
         {
-            hamer.gameObject.SetActive(true);
+            if(SetHamer(2)==false)
+            {
+                hamer.gameObject.SetActive(true);
+            }
             ++drawers1Num;
             drawer1Image.sprite = drawersSprites[drawers1Num];
             drawer1button.gameObject.SetActive(false);
@@ -241,9 +245,7 @@ public class LivingRoom : MonoBehaviour
             {
                 Debug.Log("Open Chest");
                 OpenChest();
-                drawersButton2.gameObject.SetActive(false);
-                ++drawers2Num;
-                drawer2Image.sprite = drawers2Sprite[drawers2Num];
+                
                 return;
             }
         }
@@ -251,7 +253,20 @@ public class LivingRoom : MonoBehaviour
     }
     private void OpenChest()
     {
-
+        drawersButton2.gameObject.SetActive(false);
+        ++drawers2Num;
+        drawer2Image.sprite = drawers2Sprite[drawers2Num];
+    }
+    private bool SetHamer(int id)
+    {
+        foreach (Item item in GameManager.Instance.CurrentUser.inventoryList)
+        {
+            if(item.itemID==id)
+            {
+                return true;
+            }
+        }
+        return false;
     }
     
 }
