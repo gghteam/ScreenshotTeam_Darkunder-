@@ -24,6 +24,14 @@ public class GameManager : MonoSingleton<GameManager>
         
         InvokeRepeating("SaveToJson",1f,60f);
     }
+    private void Update() {
+        //이코드 없에야 됨 ㅇㅇ
+        if(Input.GetKey(KeyCode.A))
+        {
+            Debug.Log("isOpen : 0");
+            PlayerPrefs.SetInt("isOpen",0);
+        }
+    }
     private void SaveToJson()
     {   
         SAVE_PATH = Application.dataPath  + "/Save";

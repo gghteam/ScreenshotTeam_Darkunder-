@@ -5,7 +5,6 @@ using UnityEngine.UI;
 
 public class BacklivingRoom : MonoBehaviour
 {
-    
     [SerializeField]
     private Text password;
     [SerializeField]
