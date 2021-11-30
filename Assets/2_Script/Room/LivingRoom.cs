@@ -7,6 +7,7 @@ public class LivingRoom : MonoBehaviour
     private int carfetNum = 0;
     private int drawers1Num = 0;
     private int drawers2Num = 0;
+    private int mirrorNum = 0;
     [SerializeField]
     GameObject drawers; //������ ��ü
 
@@ -15,6 +16,9 @@ public class LivingRoom : MonoBehaviour
 
     [SerializeField]
     private GameObject mirror;
+
+    [SerializeField]
+    private Image smallMirror;
 
     [SerializeField]
     private GameObject drawerKey;
@@ -33,6 +37,8 @@ public class LivingRoom : MonoBehaviour
 
     [SerializeField]
     private GameObject drawer2;
+    [SerializeField]
+    private GameObject hit;
 
     [SerializeField]
     private Button carfetButton;//ī�� ��ư
@@ -67,7 +73,13 @@ public class LivingRoom : MonoBehaviour
     private Sprite[] drawers2Sprite;
 
     [SerializeField]
+    private Sprite[] mirrorSprite;
+    [SerializeField]
+    private GameObject mirrorItemPanel;
+
+    [SerializeField]
     private Button moveToBackLivingroom;
+
     [SerializeField]
     private Button frameButton;
 
@@ -92,6 +104,11 @@ public class LivingRoom : MonoBehaviour
     private bool mirrorOnOff = false;
     private void Start()
     {
+        if(SetBrokeMirror(3))
+        {
+            mirrorNum=2;
+            smallMirror.sprite = mirrorSprite[2];
+        }
         drawer1Image = drawer1.GetComponent<Image>();
         carfetImage = carfet.GetComponent<Image>();
         drawersExitButton1.gameObject.SetActive(false);
@@ -169,6 +186,7 @@ public class LivingRoom : MonoBehaviour
             mirrorExitButton.gameObject.SetActive(true);
             frameButton.gameObject.SetActive(false);
             drawersButton1.gameObject.SetActive(false);
+            frameExitButton.gameObject.SetActive(false);
         }
         else if (mirrorOnOff == true)
         {
@@ -245,11 +263,41 @@ public class LivingRoom : MonoBehaviour
             {
                 Debug.Log("Open Chest");
                 OpenChest();
-                
+                hit.SetActive(true);
                 return;
             }
         }
         FindObjectOfType<DialogueData>().StartDialogue(id);
+    }
+    public void BrokeMirror(int id)
+    {
+        Debug.Log("Mirror");
+        foreach(Item item in GameManager.Instance.CurrentUser.inventoryList)
+        {
+            if(item.itemID==2)
+            {
+                if(mirrorNum<2)
+                {
+                    Item _item = GameManager.Instance.CurrentUser.itemList[3];
+                    GameManager.Instance.CurrentUser.inventoryList.Add(_item);
+                    GameManager.Instance.uiManager.AddPanel(_item);
+                    mirrorNum +=2;
+                    smallMirror.sprite = mirrorSprite[mirrorNum];
+                    return;
+                }
+                return;
+            }
+            
+        }
+        FindObjectOfType<DialogueData>().StartDialogue(id);
+    }
+    public void OffGameOb(GameObject ob)
+    {
+        ob.SetActive(false);
+    }
+    public void OnGameOb(GameObject ob)
+    {
+        ob.SetActive(true);
     }
     private void OpenChest()
     {
@@ -268,5 +316,15 @@ public class LivingRoom : MonoBehaviour
         }
         return false;
     }
-    
+    private bool SetBrokeMirror(int id)
+    {
+        foreach (Item item in GameManager.Instance.CurrentUser.inventoryList)
+        {
+            if (item.itemID == id)
+            {
+                return true;
+            }
+        }
+        return false;
+    }
 }
