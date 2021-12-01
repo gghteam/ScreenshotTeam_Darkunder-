@@ -25,7 +25,32 @@
             "itemType": 2
         }
     ],
-    "inventoryList": [],
+    "inventoryList": [
+        {
+            "itemID": 0,
+            "itemName": "작은방 열쇠",
+            "imageNumber": 0,
+            "itemType": 1
+        },
+        {
+            "itemID": 1,
+            "itemName": "서랍장 열쇠",
+            "imageNumber": 1,
+            "itemType": 1
+        },
+        {
+            "itemID": 2,
+            "itemName": "망치",
+            "imageNumber": 2,
+            "itemType": 2
+        },
+        {
+            "itemID": 3,
+            "itemName": "유리 조각",
+            "imageNumber": 3,
+            "itemType": 2
+        }
+    ],
     "doorListData": {
         "id": 0,
         "DoorList": [
@@ -35,7 +60,7 @@
                 "doorKeyID": 0,
                 "SentenceID": 0,
                 "nextRoomID": 1,
-                "doorOpen": false
+                "doorOpen": true
             },
             {
                 "doorName": "거실_작은방문",

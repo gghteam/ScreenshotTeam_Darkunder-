@@ -206,7 +206,7 @@ public class LivingRoom : MonoBehaviour
         {
             ++carfetNum;
             carfetImage.sprite = carfetSprites[carfetNum];
-            SfxManager.sfxInstance.Audio.PlayOneShot(SfxManager.sfxInstance.ex_Click_Carfet);
+            SfxManager.sfxInstance.Audio.PlayOneShot(SfxManager.sfxInstance.click_Carfet);
             if(SetHamer(1)==false)
             drawerKey.gameObject.SetActive(true);
             carfetButton.gameObject.SetActive(false);
@@ -215,6 +215,7 @@ public class LivingRoom : MonoBehaviour
 
     public void DrawerKey()
     {
+        SfxManager.sfxInstance.Audio.PlayOneShot(SfxManager.sfxInstance.click_Key);
         drawerKey.gameObject.SetActive(false);
     }
     public void HamerKey()
@@ -230,6 +231,7 @@ public class LivingRoom : MonoBehaviour
                 hamer.gameObject.SetActive(true);
             }
             ++drawers1Num;
+            SfxManager.sfxInstance.Audio.PlayOneShot(SfxManager.sfxInstance.click_Drawer);
             drawer1Image.sprite = drawersSprites[drawers1Num];
             drawer1button.gameObject.SetActive(false);
             drawerButton1Image2.gameObject.SetActive(true);
@@ -279,6 +281,7 @@ public class LivingRoom : MonoBehaviour
             {
                 if(mirrorNum<2)
                 {
+                    SfxManager.sfxInstance.Audio.PlayOneShot(SfxManager.sfxInstance.click_Mirror);
                     Item _item = GameManager.Instance.CurrentUser.itemList[3];
                     GameManager.Instance.CurrentUser.inventoryList.Add(_item);
                     GameManager.Instance.uiManager.AddPanel(_item);
@@ -302,6 +305,7 @@ public class LivingRoom : MonoBehaviour
     }
     private void OpenChest()
     {
+        SfxManager.sfxInstance.Audio.PlayOneShot(SfxManager.sfxInstance.click_Drawer);
         drawersButton2.gameObject.SetActive(false);
         ++drawers2Num;
         drawer2Image.sprite = drawers2Sprite[drawers2Num];

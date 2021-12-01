@@ -6,7 +6,17 @@ public class SfxManager : MonoBehaviour
 {
     public AudioSource Audio;
 
-    public AudioClip ex_Click_Carfet;
+    public AudioClip click_Carfet;
+
+    public AudioClip click_Door;
+
+    public AudioClip click_Key;
+
+    public AudioClip click_Light;
+
+    public AudioClip click_Drawer;
+
+    public AudioClip click_Mirror;
 
     public static SfxManager sfxInstance;
     private void Awake()
