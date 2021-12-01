@@ -3380,7 +3380,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 2d48a81664cebf44a89c098b3e4ac8f6, type: 3}
+  m_audioClip: {fileID: 8300000, guid: a8ef6466c6577e6488b8cd9a381472df, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 0.43
   m_Pitch: 1
@@ -7121,12 +7121,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Audio: {fileID: 1181642769}
-  click_Carfet: {fileID: 8300000, guid: c946bbe75ab5f5149ad3164be8ef8a00, type: 3}
-  click_Door: {fileID: 8300000, guid: 4a20ec8e259cdb5459d750f1a3a3b47b, type: 3}
-  click_Key: {fileID: 8300000, guid: 183d76aac2f4263468d101cc6f03cb65, type: 3}
-  click_Light: {fileID: 8300000, guid: 39dea5ff52f2f174bbf17ee4e8f804f6, type: 3}
-  click_Drawer: {fileID: 8300000, guid: a82f3971bebc3aa4baef316df9a61fa2, type: 3}
-  click_Mirror: {fileID: 8300000, guid: 406ebf00f410e3a49befb47b140144f4, type: 3}
+  click_Carfet: {fileID: 8300000, guid: de6af6aa73892914b8b29efb458ffc64, type: 3}
+  click_Door: {fileID: 8300000, guid: 48911fbb1c8bf7e4c8a34d407b9042c0, type: 3}
+  click_Key: {fileID: 8300000, guid: 50fbf042b4245414388c87f6a36c2fee, type: 3}
+  click_Light: {fileID: 8300000, guid: b396106699a853a4690635934fe66835, type: 3}
+  click_Drawer: {fileID: 8300000, guid: 3c1d11d289005584d91251552861db03, type: 3}
+  click_Mirror: {fileID: 8300000, guid: ff4323aec4f9bae48ad2a2d25fedae36, type: 3}
 --- !u!1 &1220481931
 GameObject:
   m_ObjectHideFlags: 0
