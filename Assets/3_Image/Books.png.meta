@@ -1,22 +1,19 @@
 fileFormatVersion: 2
-guid: 2962915df36744947924f2508b070aa6
+guid: 473d550278b2e2d4b8629c400245b3d9
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 3703420855921726256
-    second: DarkUnder_Item_0
+      213: -2052052637465408796
+    second: Books_0
   - first:
-      213: -694199556428668375
-    second: DarkUnder_Item_1
+      213: 7422436841525656152
+    second: Books_1
   - first:
-      213: 6952754937049113265
-    second: DarkUnder_Item_2
+      213: -5162872173411795295
+    second: Books_2
   - first:
-      213: -43767218995248529
-    second: DarkUnder_Item_3
-  - first:
-      213: 3117273426487566704
-    second: DarkUnder_Item_4
+      213: -6339561802444579130
+    second: Books_3
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -118,13 +115,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: DarkUnder_Item_0
+      name: Books_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 768
-        width: 256
-        height: 256
+        y: 0
+        width: 1094
+        height: 1294
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -132,20 +129,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 033dcfa95a1356330800000000000000
-      internalID: 3703420855921726256
+      spriteID: 4ea887b9ff4a583e0800000000000000
+      internalID: -2052052637465408796
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: DarkUnder_Item_1
+      name: Books_1
       rect:
         serializedVersion: 2
-        x: 256
-        y: 768
-        width: 256
-        height: 256
+        x: 1094
+        y: 0
+        width: 1094
+        height: 1294
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -153,20 +150,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 922e5d37e25bd56f0800000000000000
-      internalID: -694199556428668375
+      spriteID: 85ab8ea4bfac10760800000000000000
+      internalID: 7422436841525656152
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: DarkUnder_Item_2
+      name: Books_2
       rect:
         serializedVersion: 2
-        x: 512
-        y: 768
-        width: 256
-        height: 256
+        x: 2188
+        y: 0
+        width: 1094
+        height: 1294
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -174,20 +171,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1b2e72927c52d7060800000000000000
-      internalID: 6952754937049113265
+      spriteID: 1ae7a03cc1bc958b0800000000000000
+      internalID: -5162872173411795295
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: DarkUnder_Item_3
+      name: Books_3
       rect:
         serializedVersion: 2
-        x: 768
-        y: 768
-        width: 256
-        height: 256
+        x: 3282
+        y: 0
+        width: 1094
+        height: 1294
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -195,29 +192,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f624bfa32f1846ff0800000000000000
-      internalID: -43767218995248529
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: DarkUnder_Item_4
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 512
-        width: 256
-        height: 256
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 0716e855aa7c24b20800000000000000
-      internalID: 3117273426487566704
+      spriteID: 6ced7ad012a5508a0800000000000000
+      internalID: -6339561802444579130
       vertices: []
       indices: 
       edges: []
@@ -234,7 +210,7 @@ TextureImporter:
     secondaryTextures: []
   spritePackingTag: 
   pSDRemoveMatte: 0
-  pSDShowRemoveMatteOption: 1
+  pSDShowRemoveMatteOption: 0
   userData: 
   assetBundleName: 
   assetBundleVariant: 

@@ -12,6 +12,16 @@ public class BacklivingRoom : MonoBehaviour
     [SerializeField]
     private GameObject doorlock;
     [SerializeField]
+    private GameObject remoconBox;
+    [SerializeField]
+    private GameObject remocon;
+    [SerializeField]
+    private GameObject booksPanel;
+    [SerializeField]
+    private GameObject book;
+    [SerializeField]
+    private Sprite[] books;
+    [SerializeField]
     private Sprite[] panelImage;
     private int openDoorLock;
     private string doorLockNumber;
@@ -20,6 +30,14 @@ public class BacklivingRoom : MonoBehaviour
         {
             panel.GetComponent<Image>().sprite = panelImage[1];
             doorlock.SetActive(false);
+            booksPanel.SetActive(true);
+            foreach(Item item in GameManager.Instance.CurrentUser.inventoryList)
+            {
+                if(item.itemID==4)
+                return;
+            }
+            remoconBox.SetActive(true);
+            
         }
     }
     public void OnGameOb(GameObject ob)
@@ -30,10 +48,34 @@ public class BacklivingRoom : MonoBehaviour
     {
         ob.SetActive(false);
     }
+    public void ChangeBooks(int id){
+        book.GetComponent<Image>().sprite = books[id];
+    }
     public void DoorLockNumber(int number)
     {
         doorLockNumber+=string.Format("{0}",number);
         SetPassword(doorLockNumber);
+    }
+    public void RemoconBoxOpen(int id)
+    {
+        foreach(Item item in GameManager.Instance.CurrentUser.inventoryList)
+        {
+            if(item.itemID==3)
+            {
+                remoconBox.SetActive(false);
+                remocon.SetActive(true);
+                return;
+            }
+            
+        }
+        FindObjectOfType<DialogueData>().StartDialogue(id);
+    }
+    public void RemoconAcquisition()
+    {
+        remocon.SetActive(false);
+        Item _item = GameManager.Instance.CurrentUser.itemList[4];
+        GameManager.Instance.CurrentUser.inventoryList.Add(_item);
+        GameManager.Instance.uiManager.AddPanel(_item);
     }
     private void SetPassword(string _password)
     {
@@ -49,6 +91,8 @@ public class BacklivingRoom : MonoBehaviour
             Debug.Log("Open DoorLock Password : 2678");
             panel.GetComponent<Image>().sprite = panelImage[1];
             doorlock.SetActive(false);
+            remoconBox.SetActive(true);
+            booksPanel.SetActive(true);
             PlayerPrefs.SetInt("isOpen",1);
             return;
         }
