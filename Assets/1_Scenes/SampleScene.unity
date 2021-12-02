@@ -7810,6 +7810,12 @@ MonoBehaviour:
   click_Light: {fileID: 8300000, guid: b396106699a853a4690635934fe66835, type: 3}
   click_Drawer: {fileID: 8300000, guid: 3c1d11d289005584d91251552861db03, type: 3}
   click_Mirror: {fileID: 8300000, guid: ff4323aec4f9bae48ad2a2d25fedae36, type: 3}
+  click_DoorLock: {fileID: 8300000, guid: ae3296a7a7d83a14cbaca9b8f397b955, type: 3}
+  click_Paper: {fileID: 8300000, guid: a260dfe3145dfbe49b6ae02291d945e5, type: 3}
+  click_Tape: {fileID: 0}
+  click_Book: {fileID: 0}
+  click_RemoteControl: {fileID: 0}
+  click_TVSound: {fileID: 0}
 --- !u!1 &1220481931
 GameObject:
   m_ObjectHideFlags: 0

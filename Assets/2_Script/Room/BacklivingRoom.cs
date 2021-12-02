@@ -53,7 +53,8 @@ public class BacklivingRoom : MonoBehaviour
     }
     public void DoorLockNumber(int number)
     {
-        doorLockNumber+=string.Format("{0}",number);
+        SfxManager.sfxInstance.Audio.PlayOneShot(SfxManager.sfxInstance.click_DoorLock);
+        doorLockNumber +=string.Format("{0}",number);
         SetPassword(doorLockNumber);
     }
     public void RemoconBoxOpen(int id)
@@ -62,6 +63,8 @@ public class BacklivingRoom : MonoBehaviour
         {
             if(item.itemID==3)
             {
+                //사운드 찾으면 바꾸기
+                SfxManager.sfxInstance.Audio.PlayOneShot(SfxManager.sfxInstance.click_DoorLock);
                 remoconBox.SetActive(false);
                 remocon.SetActive(true);
                 return;

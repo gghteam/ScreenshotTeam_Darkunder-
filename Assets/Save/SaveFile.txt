@@ -27,7 +27,7 @@
         {
             "itemID": 4,
             "itemName": "리모컨",
-            "imageNumber": 3,
+            "imageNumber": 4,
             "itemType": 2
         }
     ],
@@ -36,6 +36,12 @@
             "itemID": 0,
             "itemName": "작은방 열쇠",
             "imageNumber": 0,
+            "itemType": 1
+        },
+        {
+            "itemID": 1,
+            "itemName": "서랍장 열쇠",
+            "imageNumber": 1,
             "itemType": 1
         },
         {
@@ -53,31 +59,19 @@
         {
             "itemID": 4,
             "itemName": "리모컨",
-            "imageNumber": 3,
+            "imageNumber": 4,
             "itemType": 2
         },
         {
             "itemID": 4,
             "itemName": "리모컨",
-            "imageNumber": 3,
+            "imageNumber": 4,
             "itemType": 2
         },
         {
             "itemID": 4,
             "itemName": "리모컨",
-            "imageNumber": 3,
-            "itemType": 2
-        },
-        {
-            "itemID": 4,
-            "itemName": "리모컨",
-            "imageNumber": 3,
-            "itemType": 2
-        },
-        {
-            "itemID": 4,
-            "itemName": "리모컨",
-            "imageNumber": 3,
+            "imageNumber": 4,
             "itemType": 2
         }
     ],

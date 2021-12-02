@@ -301,6 +301,7 @@ public class LivingRoom : MonoBehaviour
     }
     public void OnGameOb(GameObject ob)
     {
+        SfxManager.sfxInstance.Audio.PlayOneShot(SfxManager.sfxInstance.click_Paper);
         ob.SetActive(true);
     }
     private void OpenChest()

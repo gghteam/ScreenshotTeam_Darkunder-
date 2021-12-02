@@ -18,6 +18,18 @@ public class SfxManager : MonoBehaviour
 
     public AudioClip click_Mirror;
 
+    public AudioClip click_DoorLock;
+
+    public AudioClip click_Paper;
+
+    public AudioClip click_Tape;
+
+    public AudioClip click_Book;
+
+    public AudioClip click_RemoteControl;
+
+    public AudioClip click_TVSound;
+
     public static SfxManager sfxInstance;
     private void Awake()
     {
