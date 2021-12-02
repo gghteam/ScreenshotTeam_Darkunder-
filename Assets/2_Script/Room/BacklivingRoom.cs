@@ -12,6 +12,8 @@ public class BacklivingRoom : MonoBehaviour
     [SerializeField]
     private GameObject doorlock;
     [SerializeField]
+    private GameObject tv;
+    [SerializeField]
     private GameObject remoconBox;
     [SerializeField]
     private GameObject remocon;
@@ -56,6 +58,18 @@ public class BacklivingRoom : MonoBehaviour
         SfxManager.sfxInstance.Audio.PlayOneShot(SfxManager.sfxInstance.click_DoorLock);
         doorLockNumber +=string.Format("{0}",number);
         SetPassword(doorLockNumber);
+    }
+    public void OnTv(int id){
+        foreach(Item item in GameManager.Instance.CurrentUser.inventoryList)
+        {
+            if(item.itemID==4)
+            {
+                tv.SetActive(true);
+                return;
+            }
+            
+        }
+        FindObjectOfType<DialogueData>().StartDialogue(id);
     }
     public void RemoconBoxOpen(int id)
     {
