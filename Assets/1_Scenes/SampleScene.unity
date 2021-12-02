@@ -9176,10 +9176,10 @@ MonoBehaviour:
   click_Mirror: {fileID: 8300000, guid: ff4323aec4f9bae48ad2a2d25fedae36, type: 3}
   click_DoorLock: {fileID: 8300000, guid: ae3296a7a7d83a14cbaca9b8f397b955, type: 3}
   click_Paper: {fileID: 8300000, guid: a260dfe3145dfbe49b6ae02291d945e5, type: 3}
-  click_Tape: {fileID: 0}
-  click_Book: {fileID: 0}
-  click_RemoteControl: {fileID: 0}
-  click_TVSound: {fileID: 0}
+  click_Tape: {fileID: 8300000, guid: fada6e4eafa864d4ca331e079c2db76b, type: 3}
+  click_Book: {fileID: 8300000, guid: 602f8b6d5694dfa4c93b6cef45edc339, type: 3}
+  click_RemoteControl: {fileID: 8300000, guid: 5f086dfb0f140624a9fb0e8e90ae46ce, type: 3}
+  click_TVSound: {fileID: 8300000, guid: 757768c692f9e65469bc7790e15ba9d2, type: 3}
 --- !u!1 &1220481931
 GameObject:
   m_ObjectHideFlags: 0
@@ -9214,7 +9214,6 @@ RectTransform:
   - {fileID: 1451577173}
   - {fileID: 511635027}
   - {fileID: 735404254}
-  - {fileID: 1657701525}
   m_Father: {fileID: 221545619}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -11869,12 +11868,12 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1657701524}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 1220481932}
-  m_RootOrder: 5
+  m_Father: {fileID: 1773137492}
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -12053,6 +12052,7 @@ RectTransform:
   m_Children:
   - {fileID: 1413076822}
   - {fileID: 1639379511}
+  - {fileID: 1657701525}
   m_Father: {fileID: 1220481932}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

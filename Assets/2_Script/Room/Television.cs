@@ -20,6 +20,7 @@ public class Television : MonoBehaviour
         if(offTv)
         {
             offTv = false;
+            SfxManager.sfxInstance.Audio.PlayOneShot(SfxManager.sfxInstance.click_TVSound);
             televisionScreen.GetComponent<Image>().sprite = televisionSprite[1];
         }
         else
@@ -33,7 +34,8 @@ public class Television : MonoBehaviour
     {
         if(offTv)return;
         telecisionNumber += string.Format("{0}",number);
-        channelSet=0;
+        SfxManager.sfxInstance.Audio.PlayOneShot(SfxManager.sfxInstance.click_RemoteControl);
+        channelSet =0;
         telecisionNumberText.text = telecisionNumber;
         if(isInput==false)
         StartCoroutine(ChangeChanal());
@@ -59,7 +61,7 @@ public class Television : MonoBehaviour
         Debug.Log("Input Chanel Number"+telecisionNumber);
         if(telecisionNumber=="1234")
         {
-            
+            SfxManager.sfxInstance.Audio.PlayOneShot(SfxManager.sfxInstance.click_RemoteControl);
         }
         telecisionNumber = "";
         telecisionNumberText.text = telecisionNumber;

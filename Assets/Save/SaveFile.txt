@@ -61,18 +61,6 @@
             "itemName": "리모컨",
             "imageNumber": 4,
             "itemType": 2
-        },
-        {
-            "itemID": 4,
-            "itemName": "리모컨",
-            "imageNumber": 4,
-            "itemType": 2
-        },
-        {
-            "itemID": 4,
-            "itemName": "리모컨",
-            "imageNumber": 4,
-            "itemType": 2
         }
     ],
     "doorListData": {

@@ -44,6 +44,7 @@ public class BacklivingRoom : MonoBehaviour
     }
     public void OnGameOb(GameObject ob)
     {
+        SfxManager.sfxInstance.Audio.PlayOneShot(SfxManager.sfxInstance.click_Book);
         ob.SetActive(true);
     }
     public void OffGameOb(GameObject ob)
@@ -51,6 +52,7 @@ public class BacklivingRoom : MonoBehaviour
         ob.SetActive(false);
     }
     public void ChangeBooks(int id){
+        SfxManager.sfxInstance.Audio.PlayOneShot(SfxManager.sfxInstance.click_Book);
         book.GetComponent<Image>().sprite = books[id];
     }
     public void DoorLockNumber(int number)
@@ -78,7 +80,7 @@ public class BacklivingRoom : MonoBehaviour
             if(item.itemID==3)
             {
                 //사운드 찾으면 바꾸기
-                SfxManager.sfxInstance.Audio.PlayOneShot(SfxManager.sfxInstance.click_DoorLock);
+                SfxManager.sfxInstance.Audio.PlayOneShot(SfxManager.sfxInstance.click_Tape);
                 remoconBox.SetActive(false);
                 remocon.SetActive(true);
                 return;
