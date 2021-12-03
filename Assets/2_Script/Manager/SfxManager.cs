@@ -1,9 +1,11 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Audio;
 
 public class SfxManager : MonoBehaviour
 {
+    public AudioMixer mixer;
     public AudioSource Audio;
 
     public AudioClip click_Carfet;
@@ -39,6 +41,9 @@ public class SfxManager : MonoBehaviour
             return;
         }
         sfxInstance = this;
-        DontDestroyOnLoad(this);
+    }
+    public void SFXSoundVolume(float val)
+    {
+        mixer.SetFloat("SFXSound",Mathf.Log10(val)*20);
     }
 }

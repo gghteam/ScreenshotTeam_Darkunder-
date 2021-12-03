@@ -39,6 +39,12 @@ public class UiManager : MonoBehaviour
         Debug.Log("Start Game");
         inGmaePanel.SetActive(true);
         startGamePanel.SetActive(false);
+        if(PlayerPrefs.GetInt("STARTGAME")!=1)
+        {
+            PlayerPrefs.SetInt("STARTGAME",1);
+            FindObjectOfType<DialogueData>().StartDialogue(5);
+        }
+        
     }
     public void SettingPanelBtn()
     {
