@@ -8,7 +8,7 @@ public class Television : MonoBehaviour
     [SerializeField]
     private Text telecisionNumberText;
     [SerializeField]
-    private GameObject televisionScreen;
+    private Image televisionScreen;
     [SerializeField]
     private Sprite[] televisionSprite;
     private string telecisionNumber;
@@ -21,12 +21,12 @@ public class Television : MonoBehaviour
         {
             offTv = false;
             SfxManager.sfxInstance.Audio.PlayOneShot(SfxManager.sfxInstance.click_TVSound);
-            televisionScreen.GetComponent<Image>().sprite = televisionSprite[1];
+            televisionScreen.sprite = televisionSprite[1];
         }
         else
         {
             offTv = true;
-            televisionScreen.GetComponent<Image>().sprite = televisionSprite[0];
+            televisionScreen.sprite = televisionSprite[0];
         }
         
     }
@@ -46,8 +46,7 @@ public class Television : MonoBehaviour
         {
             isInput = true;
             if(channelSet>=2)
-            {
-                
+            {     
                 isInput = false;
                 Channel();
                 yield break;
@@ -58,12 +57,43 @@ public class Television : MonoBehaviour
     }
     private void Channel()
     {
-        Debug.Log("Input Chanel Number"+telecisionNumber);
-        if(telecisionNumber=="1234")
+        Debug.Log("Input Chanel Number "+telecisionNumber);
+        if(telecisionNumber=="1836")
         {
+            StartCoroutine(ScreenTrue());
             SfxManager.sfxInstance.Audio.PlayOneShot(SfxManager.sfxInstance.click_RemoteControl);
+        }
+        else
+        {
+            StartCoroutine(ScreenError());
         }
         telecisionNumber = "";
         telecisionNumberText.text = telecisionNumber;
+    }
+    private IEnumerator ScreenTrue()
+    {
+        televisionScreen.sprite = televisionSprite[4];
+        yield return new WaitForSeconds(1f);
+        televisionScreen.sprite = televisionSprite[7];
+        yield return new WaitForSeconds(0.5f);
+        televisionScreen.sprite = televisionSprite[5];
+        yield return new WaitForSeconds(1f);
+        televisionScreen.sprite = televisionSprite[6];
+        yield return new WaitForSeconds(0.5f);
+        televisionScreen.sprite = televisionSprite[1];
+    }
+    private IEnumerator ScreenError()
+    {
+        int a = Random.Range(1,3);
+        if(a==1)
+        {
+            televisionScreen.sprite = televisionSprite[2];
+        }
+        else{
+            televisionScreen.sprite = televisionSprite[3];
+        }
+        yield return new WaitForSeconds(0.5f);
+        televisionScreen.sprite = televisionSprite[1];
+        yield return new WaitForSeconds(0.5f);
     }
 }
