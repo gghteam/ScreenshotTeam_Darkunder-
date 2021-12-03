@@ -20,7 +20,6 @@ public class Television : MonoBehaviour
         if(offTv)
         {
             offTv = false;
-            SfxManager.sfxInstance.Audio.PlayOneShot(SfxManager.sfxInstance.click_TVSound);
             televisionScreen.sprite = televisionSprite[1];
         }
         else
@@ -73,26 +72,35 @@ public class Television : MonoBehaviour
     private IEnumerator ScreenTrue()
     {
         televisionScreen.sprite = televisionSprite[4];
+        SfxManager.sfxInstance.Audio.PlayOneShot(SfxManager.sfxInstance.tvSound);
         yield return new WaitForSeconds(1f);
         televisionScreen.sprite = televisionSprite[7];
+         SfxManager.sfxInstance.Audio.Stop();
+        SfxManager.sfxInstance.Audio.PlayOneShot(SfxManager.sfxInstance.scream);
         yield return new WaitForSeconds(0.5f);
+        SfxManager.sfxInstance.Audio.PlayOneShot(SfxManager.sfxInstance.tvSound);
         televisionScreen.sprite = televisionSprite[5];
         yield return new WaitForSeconds(1f);
         televisionScreen.sprite = televisionSprite[6];
         yield return new WaitForSeconds(0.5f);
+        SfxManager.sfxInstance.Audio.Stop();
         televisionScreen.sprite = televisionSprite[1];
     }
     private IEnumerator ScreenError()
     {
         int a = Random.Range(1,3);
-        if(a==1)
+        if(a!=3)
         {
+            SfxManager.sfxInstance.Audio.PlayOneShot(SfxManager.sfxInstance.tvSound);
             televisionScreen.sprite = televisionSprite[2];
+            
         }
         else{
+            SfxManager.sfxInstance.Audio.PlayOneShot(SfxManager.sfxInstance.scream);
             televisionScreen.sprite = televisionSprite[3];
         }
         yield return new WaitForSeconds(0.5f);
+        SfxManager.sfxInstance.Audio.Stop();
         televisionScreen.sprite = televisionSprite[1];
         yield return new WaitForSeconds(0.5f);
     }

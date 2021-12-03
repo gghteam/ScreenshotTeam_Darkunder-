@@ -122,6 +122,10 @@ public class LivingRoom : MonoBehaviour
         hamer.gameObject.SetActive(false);
         drawers.SetActive(false);
     }
+    public void Sentence(int id)
+    {
+        FindObjectOfType<DialogueData>().StartDialogue(id);
+    }
     public void DrawersClick()
     {
         if (drawerOnOff == false)

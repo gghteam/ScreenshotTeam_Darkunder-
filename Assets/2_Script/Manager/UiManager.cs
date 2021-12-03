@@ -10,6 +10,10 @@ public class UiManager : MonoBehaviour
     [SerializeField]
     private GameObject startGamePanel;
     [SerializeField]
+    private GameObject itempanel;
+    [SerializeField]
+    private GameObject endPanel;
+    [SerializeField]
     private GameObject inGmaePanel;
     [SerializeField]
     private GameObject settingPanel;
@@ -44,7 +48,10 @@ public class UiManager : MonoBehaviour
             PlayerPrefs.SetInt("STARTGAME",1);
             FindObjectOfType<DialogueData>().StartDialogue(5);
         }
-        
+    }
+    public void EndGame(){
+        endPanel.SetActive(true);
+        itempanel.SetActive(false);
     }
     public void SettingPanelBtn()
     {

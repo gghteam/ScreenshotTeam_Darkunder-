@@ -17,6 +17,7 @@ public class ExitDoor : MonoBehaviour
     public void Acept()
     {
         int a= 0;
+        SfxManager.sfxInstance.Audio.PlayOneShot(SfxManager.sfxInstance.click_DoorLock);
         split_Text = password.Split(',');
         for(int i = 0;i < split_Text.Length-1;i++)
         {
@@ -47,6 +48,8 @@ public class ExitDoor : MonoBehaviour
     }
     private void OpenDoor()
     {
+        GameManager.Instance.uiManager.EndGame();
+        FindObjectOfType<DialogueData>().StartDialogue(8);
         Debug.Log("Open Exit Door");
     }
 }

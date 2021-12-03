@@ -29,8 +29,8 @@ public class SfxManager : MonoBehaviour
     public AudioClip click_Book;
 
     public AudioClip click_RemoteControl;
-
-    public AudioClip click_TVSound;
+    public AudioClip scream;
+    public AudioClip tvSound;
 
     public static SfxManager sfxInstance;
     private void Awake()
@@ -44,6 +44,6 @@ public class SfxManager : MonoBehaviour
     }
     public void SFXSoundVolume(float val)
     {
-        mixer.SetFloat("SFXSound",Mathf.Log10(val)*20);
+        mixer.SetFloat("SFXSound",Mathf.Log10(val)*200);
     }
 }

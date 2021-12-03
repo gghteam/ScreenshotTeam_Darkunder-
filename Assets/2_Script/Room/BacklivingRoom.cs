@@ -79,7 +79,7 @@ public class BacklivingRoom : MonoBehaviour
         {
             if(item.itemID==3)
             {
-                //»ç¿îµå Ã£À¸¸é ¹Ù²Ù±â
+                //ï¿½ï¿½ï¿½ï¿½ Ã£ï¿½ï¿½ï¿½ï¿½ ï¿½Ù²Ù±ï¿½
                 SfxManager.sfxInstance.Audio.PlayOneShot(SfxManager.sfxInstance.click_Tape);
                 remoconBox.SetActive(false);
                 remocon.SetActive(true);

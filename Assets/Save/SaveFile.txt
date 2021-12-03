@@ -39,12 +39,6 @@
             "itemType": 1
         },
         {
-            "itemID": 1,
-            "itemName": "서랍장 열쇠",
-            "imageNumber": 1,
-            "itemType": 1
-        },
-        {
             "itemID": 2,
             "itemName": "망치",
             "imageNumber": 2,
@@ -61,6 +55,12 @@
             "itemName": "리모컨",
             "imageNumber": 4,
             "itemType": 2
+        },
+        {
+            "itemID": 1,
+            "itemName": "서랍장 열쇠",
+            "imageNumber": 1,
+            "itemType": 1
         }
     ],
     "doorListData": {
