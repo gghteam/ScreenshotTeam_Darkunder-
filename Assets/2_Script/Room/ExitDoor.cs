@@ -9,8 +9,13 @@ public class ExitDoor : MonoBehaviour
     private Image[] keypad;
     private string password;
     private string[] split_Text;
+    private bool isInput;
     public void Input(int number)
     {
+        if(keypad[number-1].color==new Color(0.7f,0.09f,0.13f,0.5f))
+        {
+            return;
+        }
         password += string.Format("{0},",number);
         keypad[number-1].color = new Color(0.7f,0.09f,0.13f,0.5f);
     }

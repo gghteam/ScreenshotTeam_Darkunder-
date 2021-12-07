@@ -98,12 +98,6 @@ public class BacklivingRoom : MonoBehaviour
     }
     private void SetPassword(string _password)
     {
-        if(_password.Length>=5)
-        {
-            doorLockNumber = null;
-            password.text = string.Format("{0}",0000);
-            return;
-        }
         password.text = string.Format("{0}",_password);
         if(_password==string.Format("2678"))
         {
@@ -113,6 +107,12 @@ public class BacklivingRoom : MonoBehaviour
             remoconBox.SetActive(true);
             booksPanel.SetActive(true);
             PlayerPrefs.SetInt("isOpen",1);
+            return;
+        }
+        if(_password.Length>=4)
+        {
+            doorLockNumber = null;
+            password.text = "";
             return;
         }
     }

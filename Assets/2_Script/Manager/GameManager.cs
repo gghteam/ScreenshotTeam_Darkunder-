@@ -12,6 +12,7 @@ public class GameManager : MonoSingleton<GameManager>
     public User CurrentUser {get{return user;}}
     private string SAVE_PATH = "";
     private readonly string SAVE_FILENAME = "/SaveFile.txt";
+    private bool isReset = false;
  private void Awake() 
     {
         uiManager = FindObjectOfType<UiManager>();
@@ -19,21 +20,21 @@ public class GameManager : MonoSingleton<GameManager>
         if(!Directory.Exists(SAVE_PATH))
         {
             Directory.CreateDirectory(SAVE_PATH);
+            
         }
         LoadFromJson();
         
         InvokeRepeating("SaveToJson",1f,60f);
     }
     private void Update() {
-        //이코드 없에야 됨 ㅇㅇ
         if(Input.GetKey(KeyCode.A))
         {
-            Debug.Log("isOpen : 0");
             PlayerPrefs.SetInt("isOpen",0);
         }
     }
     private void SaveToJson()
     {   
+        if(isReset) return;
         SAVE_PATH = Application.persistentDataPath + "/Save";
         if(user == null) return;
         string json = JsonUtility.ToJson(user,true);
@@ -53,7 +54,16 @@ public class GameManager : MonoSingleton<GameManager>
             LoadFromJson();
         }
     }
+    public void ResetToJson()
+    {
+        isReset = true;
+        PlayerPrefs.SetInt("isOpen",0);
+        PlayerPrefs.SetInt("STARTGAME",0);
+        File.Delete(SAVE_PATH+SAVE_FILENAME);
+        Application.Quit();
+    }
     private void OnApplicationQuit() {
+        if(isReset) return;
         SaveToJson();    
     }
 }

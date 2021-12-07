@@ -1,0 +1,107 @@
+﻿{
+    "itemList": [
+        {
+            "itemID": 0,
+            "itemName": "작은방 열쇠",
+            "imageNumber": 0,
+            "itemType": 1
+        },
+        {
+            "itemID": 1,
+            "itemName": "서랍장 열쇠",
+            "imageNumber": 1,
+            "itemType": 1
+        },
+        {
+            "itemID": 2,
+            "itemName": "망치",
+            "imageNumber": 2,
+            "itemType": 2
+        },
+        {
+            "itemID": 3,
+            "itemName": "유리 조각",
+            "imageNumber": 3,
+            "itemType": 2
+        },
+        {
+            "itemID": 4,
+            "itemName": "리모컨",
+            "imageNumber": 4,
+            "itemType": 2
+        }
+    ],
+    "inventoryList": [
+        {
+            "itemID": 0,
+            "itemName": "작은방 열쇠",
+            "imageNumber": 0,
+            "itemType": 1
+        },
+        {
+            "itemID": 2,
+            "itemName": "망치",
+            "imageNumber": 2,
+            "itemType": 2
+        },
+        {
+            "itemID": 1,
+            "itemName": "서랍장 열쇠",
+            "imageNumber": 1,
+            "itemType": 1
+        }
+    ],
+    "doorListData": {
+        "id": 0,
+        "DoorList": [
+            {
+                "doorName": "작은방문",
+                "doorID": 0,
+                "doorKeyID": 0,
+                "SentenceID": 0,
+                "nextRoomID": 1,
+                "doorOpen": true
+            },
+            {
+                "doorName": "거실_작은방문",
+                "doorID": 1,
+                "doorKeyID": 0,
+                "SentenceID": 0,
+                "nextRoomID": 0,
+                "doorOpen": true
+            },
+            {
+                "doorName": "거실_뒷거실",
+                "doorID": 2,
+                "doorKeyID": 0,
+                "SentenceID": 0,
+                "nextRoomID": 2,
+                "doorOpen": true
+            },
+            {
+                "doorName": "뒷거실_거실",
+                "doorID": 3,
+                "doorKeyID": 0,
+                "SentenceID": 0,
+                "nextRoomID": 1,
+                "doorOpen": true
+            },
+            {
+                "doorName": "거실_부엌",
+                "doorID": 4,
+                "doorKeyID": 0,
+                "SentenceID": 0,
+                "nextRoomID": 3,
+                "doorOpen": true
+            },
+            {
+                "doorName": "부엌_거실",
+                "doorID": 5,
+                "doorKeyID": 0,
+                "SentenceID": 0,
+                "nextRoomID": 1,
+                "doorOpen": true
+            }
+        ]
+    }
+}

@@ -18,8 +18,9 @@ public class SmallRoom : MonoBehaviour
         SfxManager.sfxInstance.Audio.PlayOneShot(SfxManager.sfxInstance.click_Light);
         chagePanel[a].SetActive(false);
     }
-    public void KeySound()
-    {
+    public void Key(GameObject Ob)
+    {   
+        Ob.SetActive(false);
         SfxManager.sfxInstance.Audio.PlayOneShot(SfxManager.sfxInstance.click_Key);
     }
     public void DoorSound()

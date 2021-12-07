@@ -53,6 +53,14 @@ public class UiManager : MonoBehaviour
         endPanel.SetActive(true);
         itempanel.SetActive(false);
     }
+    public void OnGameOb(GameObject ob)
+    {
+        ob.SetActive(true);
+    }
+    public void OffGameOb(GameObject ob)
+    {
+        ob.SetActive(false);
+    }
     public void SettingPanelBtn()
     {
         settingPanel.SetActive(true);

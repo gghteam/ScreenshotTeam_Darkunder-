@@ -36,8 +36,6 @@ public class LivingRoom : MonoBehaviour
     private GameObject drawer1; //ù��° ����
 
     [SerializeField]
-    private GameObject drawer2;
-    [SerializeField]
     private GameObject hit;
 
     [SerializeField]
