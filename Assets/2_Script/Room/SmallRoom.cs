@@ -6,6 +6,18 @@ public class SmallRoom : MonoBehaviour
 {
     [SerializeField]
     private GameObject[] chagePanel;
+    [SerializeField]
+    private GameObject smallRoomKey;
+    private void Start() {
+        foreach (Item item in GameManager.Instance.CurrentUser.inventoryList)
+        {
+            if(item.itemID==0)
+            {
+                smallRoomKey.SetActive(false);
+                return;
+            }
+        }
+    }
     public void OnClickChageOn(int a)
     {
         Debug.Log("on");

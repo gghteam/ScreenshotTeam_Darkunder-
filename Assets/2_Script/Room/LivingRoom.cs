@@ -51,11 +51,6 @@ public class LivingRoom : MonoBehaviour
     private Button drawerButton1Image2;//Ȯ�� �Ǿ����� ù��° ���� ������ �� ��ư
 
     [SerializeField]
-    private Button drawersExitButton1;//������ ������ ��ư
-
-    [SerializeField]
-    private Button drawersExitButton2;//������ ������ ��ư2
-    [SerializeField]
     private Button drawersExitButton3;
 
     [SerializeField]
@@ -109,8 +104,6 @@ public class LivingRoom : MonoBehaviour
         }
         drawer1Image = drawer1.GetComponent<Image>();
         carfetImage = carfet.GetComponent<Image>();
-        drawersExitButton1.gameObject.SetActive(false);
-        drawersExitButton2.gameObject.SetActive(false);
         drawersExitButton3.gameObject.SetActive(false);
         frameExitButton.gameObject.SetActive(false);
         mirrorExitButton.gameObject.SetActive(false);
@@ -133,8 +126,6 @@ public class LivingRoom : MonoBehaviour
             moveToBackLivingroom.gameObject.SetActive(false);
             mirrorButton.gameObject.SetActive(false);
             mirrorExitButton.gameObject.SetActive(false);
-            drawersExitButton1.gameObject.SetActive(true);
-            drawersExitButton2.gameObject.SetActive(true);
             drawersExitButton3.gameObject.SetActive(true);
             drawersButton1.gameObject.SetActive(false);
         }
@@ -145,8 +136,6 @@ public class LivingRoom : MonoBehaviour
             drawerOnOff = false;
             mirrorButton.gameObject.SetActive(true);
             mirrorExitButton.gameObject.SetActive(false);
-            drawersExitButton1.gameObject.SetActive(false);
-            drawersExitButton2.gameObject.SetActive(false);
             drawersExitButton3.gameObject.SetActive(false);
             drawersButton1.gameObject.SetActive(true);
         }
