@@ -107,6 +107,10 @@ public class UiManager : MonoBehaviour
         panel.SetActive(true);
         InventoryPanelList.Add(panelComponent);
     }
+    public void DelItemPanel(Item DelItem)
+    {
+        
+    }
     public void UpDownPanel()
     {
         if(isUptime)return;
